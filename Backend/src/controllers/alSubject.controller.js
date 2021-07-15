@@ -34,11 +34,12 @@ Router.post(
   async (req, res) => {
     try {
       if(!upload){
-        const { olSubject, grade, classTime, ZoomLink } = req.body;
+        const { olSubject, grade, date, classTime, ZoomLink } = req.body;
       const { path, mimetype } = req.file;
       const file = new Subject({
         olSubject,  
         grade, 
+        date,
         classTime, 
         ZoomLink,
         file_path: path,
@@ -47,10 +48,11 @@ Router.post(
     await file.save();
     res.send('OL subject and Files uploaded successfully.');
     }else{
-      const { olSubject, grade, classTime, ZoomLink } = req.body;
+      const { olSubject, grade, date, classTime, ZoomLink } = req.body;
       const file = new Subject({
         olSubject,  
         grade, 
+        date,
         classTime, 
         ZoomLink
       });

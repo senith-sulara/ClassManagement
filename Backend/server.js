@@ -5,6 +5,8 @@ const cors = require('cors');
 const userAPI = require("./src/api/Registration.api");
 const olSubjectRoute = require('./src/controllers/olSubject.controller')
 const alSubjectRoute = require('./src/controllers/alSubject.controller')
+const TeacherDRoute = require('./src/controllers/TeacherDEtails.controller')
+
 
 
 
@@ -37,6 +39,7 @@ mongoose.connection.once('open', () => {
 app.use('/user', userAPI());
 app.use('/olSub', olSubjectRoute);
 app.use('/alSub', alSubjectRoute);
+app.use('/teacherDetails', TeacherDRoute);
  
 app.listen(PORT, () =>{
     console.log(`Server is up and running on PORT ${PORT}`);
