@@ -1,0 +1,22 @@
+#head1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, serif; 
+}
+#head2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 200px;
+
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, serif; 
+}
